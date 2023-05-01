@@ -21,7 +21,8 @@
                 echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
             ' . $msg . '
           </div>';
-            }  if (isset($_GET['sucesso'])) {
+            }
+            if (isset($_GET['sucesso'])) {
                 $sucesso = $_GET['sucesso'];
                 echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
         ' . $sucesso . '
@@ -37,6 +38,7 @@
                 </p>
                 <p> <button type="submit" name="submit" class="btn btn-success">Entrar</button>
                     <a href="register.php" class="btn btn-secondary">register</a>
+                    <a href="../index.html" class="btn btn-danger">Cancel</a>
                 </p>
 
 
