@@ -38,7 +38,7 @@
                 </p>
                 <p> <button type="submit" name="submit" class="btn btn-success">Entrar</button>
                     <a href="register.php" class="btn btn-secondary">register</a>
-                    <a href="../index.html" class="btn btn-danger">Cancel</a>
+                    <a href="../index.php" class="btn btn-danger">Cancel</a>
                 </p>
 
 

@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_GET['submit'])) {
+  unset($_SESSION['user']);
+  header('Location: php/index.php');
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +17,7 @@
     <title>Bikeram</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="" />
 </head>
 
 <body>
@@ -25,9 +35,14 @@
                     <form class="d-flex" role="search">
                         <div id="nome"></div>
                         <?php
-            session_start();
+
             if (isset($_SESSION["user"])) {
               echo $_SESSION["user"];
+              echo "<form action='' method='GET'>
+              
+              <button type='submit' class='btn btn-danger' name='submit'>SAIR</button>
+              </form>
+              ";
             } else
               echo "<a href='php/index.php' class='btn btn-outline-success'> LOGIN</a>"; ?>
 

@@ -16,5 +16,6 @@ if (isset($_POST['submit'])) {
         header('Location: ../index.php');
         session_start();
         $_SESSION["user"] = $user; //salvando o user na sessão
+
     }
 }
