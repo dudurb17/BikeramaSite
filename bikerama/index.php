@@ -1,8 +1,7 @@
 <?php
 session_start();
 if (isset($_GET['submit'])) {
-  unset($_SESSION['user']);
-  header('Location: php/index.php');
+  session_destroy();
 }
 
 
