@@ -24,8 +24,10 @@
                 <div class="col-4 pt-1">
                     <form class="d-flex" role="search">
                         <div id="nome"></div>
-                        <?php if (isset($_GET["teste"])) {
-              echo "teste";
+                        <?php
+            session_start();
+            if (isset($_SESSION["user"])) {
+              echo $_SESSION["user"];
             } else
               echo "<a href='php/index.php' class='btn btn-outline-success'> LOGIN</a>"; ?>
 

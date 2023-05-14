@@ -13,7 +13,8 @@ if (isset($_POST['submit'])) {
     if ($sql_query == false || password_verify($senha, $usuario['senha']) == false) {
         header("Location: index.php?msg=Usuario ou senha incorreto");
     } else {
-        header('Location: ../index.php?Sucesso=Login efetuado');
+        header('Location: ../index.php');
         session_start();
+        $_SESSION["user"] = $user; //salvando o user na sessão
     }
 }
