@@ -1,9 +1,8 @@
 <?php
 session_start();
 if (isset($_GET['submit'])) {
-  session_destroy();
+    session_destroy();
 }
-
 
 ?>
 
@@ -14,8 +13,7 @@ if (isset($_GET['submit'])) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bikeram</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
     <link rel="stylesheet" href="" />
 </head>
 
@@ -24,8 +22,7 @@ if (isset($_GET['submit'])) {
         <header>
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-4 pt-1">
-                    <img src="https://wiki.sj.ifsc.edu.br/images/2/2e/Sao_jose_horizontal_marca2015_PNG.png" alt="ifsc"
-                        width="100px" />
+                    <img src="https://wiki.sj.ifsc.edu.br/images/2/2e/Sao_jose_horizontal_marca2015_PNG.png" alt="ifsc" width="100px" />
                 </div>
                 <div class="col-4 pt-1">
                     <a class="link-secondary" href="#bike">Bikerama</a>
@@ -35,15 +32,15 @@ if (isset($_GET['submit'])) {
                         <div id="nome"></div>
                         <?php
 
-            if (isset($_SESSION["user"])) {
-              echo $_SESSION["user"];
-              echo "<form action='' method='GET'>
+                        if (isset($_SESSION["user"])) {
+                            echo $_SESSION["user"];
+                            echo "<form action='' method='GET'>
               
               <button type='submit' class='btn btn-danger' name='submit'>SAIR</button>
               </form>
               ";
-            } else
-              echo "<a href='php/index.php' class='btn btn-outline-success'> LOGIN</a>"; ?>
+                        } else
+                            echo "<a href='php/index.php' class='btn btn-outline-success'> LOGIN</a>"; ?>
 
                     </form>
                 </div>
@@ -79,13 +76,11 @@ if (isset($_GET['submit'])) {
                         <h1 class="text-center">Pagina três</h1>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -108,8 +103,7 @@ if (isset($_GET['submit'])) {
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <img src="https://www.ifsc.edu.br/documents/23504/23634/Foto_C%C3%A2mpusChapec%C3%B3_2017.jpg/70658386-f096-6cff-e453-d76b289be4f8?t=1504298890892"
-                                class="img-fluid rounded-start" alt="..." style="border-radius: 5px" />
+                            <img src="https://www.ifsc.edu.br/documents/23504/23634/Foto_C%C3%A2mpusChapec%C3%B3_2017.jpg/70658386-f096-6cff-e453-d76b289be4f8?t=1504298890892" class="img-fluid rounded-start" alt="..." style="border-radius: 5px" />
                         </div>
                     </div>
                 </div>
@@ -130,8 +124,7 @@ if (isset($_GET['submit'])) {
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <img src="https://static.amazonasbike.com.br/public/amazonasbike/imagens/produtos/bicicleta-amazonas-max-unissex-aro-20-1395-1836.png"
-                                class="img-fluid rounded-start" alt="..." />
+                            <img src="https://static.amazonasbike.com.br/public/amazonasbike/imagens/produtos/bicicleta-amazonas-max-unissex-aro-20-1395-1836.png" class="img-fluid rounded-start" alt="..." />
                         </div>
                     </div>
                 </div>
@@ -248,9 +241,7 @@ if (isset($_GET['submit'])) {
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"
-        src="sript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous" src="sript.js"></script>
 </body>
 
 </html>
