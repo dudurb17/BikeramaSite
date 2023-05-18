@@ -14,8 +14,8 @@ class BD
     public function inserir($dados)
     {
         $conn = $this->conn();
-        $sql = "INSERT INTO `usuario`(`id`, `nome`, `user`, `senha`, `email`) VALUES (`null`,?,?,?,?)";
+        $sql = "INSERT INTO `usuario`(`id`, `nome`, `user`, `senha`, `email`) VALUES (?,?,?,?,?)";
         $st = $conn->prepare($sql);
-        $st->execute([$dados['nome'], $dados['user'], $dados['senha'], $dados['email']]);
+        $st->execute(['null', $dados['nome'], $dados['user'], $dados['senha'], $dados['email']]);
     }
 }
