@@ -18,4 +18,11 @@ class BD
         $st = $conn->prepare($sql);
         $st->execute(['null', $dados['nome'], $dados['user'], $dados['senha'], $dados['email']]);
     }
+    public function login($dados)
+    {
+        $conn = $this->conn();
+        $sql = "SELECT `id`, `nome`, `user`, `senha`, `email` FROM `usuario` WHERE user=? ";
+        $st = $conn->prepare($sql);
+        $st->execute($dados['user']);
+    }
 }
