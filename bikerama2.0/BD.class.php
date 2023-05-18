@@ -9,10 +9,13 @@ class BD
     public function conn()
     {
         $conn = mysqli_connect($this->host, $this->usuario, $this->senha, $this->dbname);
+        return $conn;
     }
     public function inserir($dados)
     {
         $conn = $this->conn();
         $sql = "INSERT INTO `usuario`(`id`, `nome`, `user`, `senha`, `email`) VALUES (`null`,?,?,?,?)";
+        $st = $conn->prepare($sql);
+        $st->execute([$dados['nome'], $dados['user'], $dados['senha'], $dados['email']]);
     }
 }
