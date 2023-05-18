@@ -2,7 +2,17 @@
 include 'BD.class.php';
 $conn = new BD();
 if (!empty($_POST)) {
-    $conn->inserir($_POST);
+    try {
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            throw new Exception(" Formato de e-mail inválido. ");
+        }
+        if (empty($_POST['id'])) {
+            $conn->inserir($_POST);
+        }
+    } catch (Exception $e) {
+        $id = $_POST['id'];
+        header("location: form.php?id=$id&error=" . $e->getMessage());
+    }
 }
 
 ?>
@@ -31,8 +41,9 @@ if (!empty($_POST)) {
 
 
             <form action="form.php" method="post">
+                <?php echo (!empty($_GET["error"]) ? $_GET['error'] : "") ?>
 
-
+                <input type="hidden" name="id" value="">
                 <p><Label>Informe seu nome:</Label>
                     <br />
                     <input type="text" name="nome" id="" required>
