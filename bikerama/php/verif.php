@@ -12,7 +12,6 @@ if (isset($_POST['submit'])) {
     $resultveri = mysqli_query($conn, $verificacao);
     $quantidade = mysqli_num_rows($resultveri);
     if ($quantidade == 0) {
-
         if (empty($nome) || empty($user) || empty($senha)) {
             header("Location: register.php?msg=Preencha todos os campo");
         } elseif (password_verify($confSenha, $senha) == false) {
